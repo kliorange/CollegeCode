@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    printf("ÇëÊäÈëÔ²µÄÖ±¾¶£¬ÎÒ»á¼ÆËãÃæ»ı^_^");
+    printf("è¯·è¾“å…¥åœ†çš„ç›´å¾„ï¼Œæˆ‘ä¼šè®¡ç®—é¢ç§¯^_^");
     double D=0,sum=0;
     scanf("%lf",&D);
     sum = (D/2)*(D/2)*3.14;
-    printf("Ãæ»ıS1Îª%lf",sum);
+    printf("é¢ç§¯S1ä¸º%lf",sum);
     return 0;
 }
