@@ -2,11 +2,11 @@
 #include<math.h>
 int main()
 {
-     printf("ÇëÊäÈëa±ß b±ß c±ß ÎÒ¿ÉÒÔÇó³öÈı½ÇĞÎµÄÃæ»ı");
+     printf("è¯·è¾“å…¥aè¾¹ bè¾¹ cè¾¹ æˆ‘å¯ä»¥æ±‚å‡ºä¸‰è§’å½¢çš„é¢ç§¯");
      double a=0,b=0,c=0,P=0,sum=0;
      scanf("%lf%lf%lf",&a,&b,&c);
      P = (a+b+c)/2;
      sum = sqrt(P*(P-a)*(P-b)*(P-c));
-     printf("Ãæ»ıS3Îª%lf",sum);
+     printf("é¢ç§¯S3ä¸º%lf",sum);
     return 0;
 }
