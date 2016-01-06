@@ -50,8 +50,10 @@ int main()
                 printf("You guest the number with %d try",sum);
                 return 0;
             }
-            else if(guest>judge)printf("the number is smaller than you think!");
-            else printf("the number is bigger than you think!");
+            else if(guest>judge)
+            	printf("the number is smaller than you think!");
+            else 
+            	printf("the number is bigger than you think!");
             printf("you only have %d chance\n",10-sum);
             sum++;
         }
