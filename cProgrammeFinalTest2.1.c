@@ -1,19 +1,18 @@
 /*
 kliorange
 2015.11.28
-ÊµÑéÈı£º
-1.Ñ§Éú³É¼¨Í³¼Æ£¨Ò»Î¬Êı×é£©´Ó¼üÅÌÊäÈëÒ»¸ö°à£¨È«°à×î¶à²»³¬¹ı 30ÈË£©Ñ§ÉúÄ³ÃÅ¿ÎµÄ³É¼¨£¬µ±ÊäÈë³É¼¨Îª¸ºÖµÊ±£¬ÊäÈë½áÊø£¬·Ö±ğÊµÏÖÏÂÁĞ¹¦ÄÜ£º
-£¨1£©Í³¼Æ²»¼°¸ñÈËÊı²¢´òÓ¡²»¼°¸ñÑ§ÉúÃûµ¥£»
-£¨2£©Í³¼Æ³É¼¨ÔÚÈ«°àÆ½¾ù·Ö¼°Æ½¾ù·ÖÖ®ÉÏµÄÑ§ÉúÈËÊı£¬²¢´òÓ¡ÕâĞ©Ñ§ÉúµÄÃûµ¥£»
-£¨3£©ÒÔÖ±·½Í¼·½Ê½Í³ ¼Æ¸÷·ÖÊı¶ÎµÄÑ§ÉúÈË Êı¼°ËùÕ¼µÄ°Ù·Ö±È¡£ĞÎ Ê½ÈçÏÂ£º
+å®éªŒä¸‰ï¼š
+1.å­¦ç”Ÿæˆç»©ç»Ÿè®¡ï¼ˆä¸€ç»´æ•°ç»„ï¼‰ä»é”®ç›˜è¾“å…¥ä¸€ä¸ªç­ï¼ˆå…¨ç­æœ€å¤šä¸è¶…è¿‡ 30äººï¼‰å­¦ç”ŸæŸé—¨è¯¾çš„æˆç»©ï¼Œå½“è¾“å…¥æˆç»©ä¸ºè´Ÿå€¼æ—¶ï¼Œè¾“å…¥ç»“æŸï¼Œåˆ†åˆ«å®ç°ä¸‹åˆ—åŠŸèƒ½ï¼š
+ï¼ˆ1ï¼‰ç»Ÿè®¡ä¸åŠæ ¼äººæ•°å¹¶æ‰“å°ä¸åŠæ ¼å­¦ç”Ÿåå•ï¼›
+ï¼ˆ2ï¼‰ç»Ÿè®¡æˆç»©åœ¨å…¨ç­å¹³å‡åˆ†åŠå¹³å‡åˆ†ä¹‹ä¸Šçš„å­¦ç”Ÿäººæ•°ï¼Œå¹¶æ‰“å°è¿™äº›å­¦ç”Ÿçš„åå•ï¼›
+ï¼ˆ3ï¼‰ä»¥ç›´æ–¹å›¾æ–¹å¼ç»Ÿ è®¡å„åˆ†æ•°æ®µçš„å­¦ç”Ÿäºº æ•°åŠæ‰€å çš„ç™¾åˆ†æ¯”ã€‚å½¢ å¼å¦‚ä¸‹ï¼š
 
-
-·Ö¶Î	ÈËÊı	Í¼ĞÎ
-<60   3£¨10%£©***
-60©\69	8£¨¡­£© ********
-70©\79	7£¨¡­£© *******
-80©\89	8£¨¡­£© ********
->=90	4£¨¡­£© ****
+åˆ†æ®µ	äººæ•°	å›¾å½¢
+<60   3ï¼ˆ10%ï¼‰***
+60â€69	8ï¼ˆâ€¦ï¼‰ ********
+70â€79	7ï¼ˆâ€¦ï¼‰ *******
+80â€89	8ï¼ˆâ€¦ï¼‰ ********
+>=90	4ï¼ˆâ€¦ï¼‰ ****
 */
 
 #include<stdio.h>
@@ -132,13 +131,13 @@ int main()
 	double aveScore(double score[]);
 	int aveNum(double score[],char name[][32]);
 
-    printf("Please input the score£º");
+    printf("Please input the scoreï¼š");
     while(scanf("%lf",&score[i]),score[i]>0)
     {
-        printf("\nPlease input the students name£º");
+        printf("\nPlease input the students nameï¼š");
         scanf("%s",&name[i]);
 
-        printf("\nPlease input the score£º");
+        printf("\nPlease input the scoreï¼š");
         i++;
     }
     printf("\nThis exam have %d student%c fail in total\n",
@@ -149,7 +148,7 @@ int main()
         aveNum(score,name),aveNum(score,name)>0?'s':' ');
     line(aveScore(score),score,name,1);//Find out and printf the students who beyond the average
 
-    printf("\n·Ö¶Î    ÈËÊı    Í¼ĞÎ    \n");
+    printf("\nåˆ†æ®µ    äººæ•°    å›¾å½¢    \n");
     printf("0 -60    %d    ",judgeNum(score,0,60));
     printfPercent(score,judgeNum(score,0,60));
     putStar(judgeNum(score,0,60));
@@ -174,35 +173,35 @@ int main()
 }
 
 /*
-Please input the score£º100
+Please input the scoreï¼š100
 
-Please input the students name£ºjack
+Please input the students nameï¼šjack
 
-Please input the score£º98
+Please input the scoreï¼š98
 
-Please input the students name£ºdaniel
+Please input the students nameï¼šdaniel
 
-Please input the score£º80
+Please input the scoreï¼š80
 
-Please input the students name£ºtom
+Please input the students nameï¼štom
 
-Please input the score£º45
+Please input the scoreï¼š45
 
-Please input the students name£ºkaka
+Please input the students nameï¼škaka
 
-Please input the score£º95
+Please input the scoreï¼š95
 
-Please input the students name£ºlisa
+Please input the students nameï¼šlisa
 
-Please input the score£º12
+Please input the scoreï¼š12
 
-Please input the students name£ºlexi
+Please input the students nameï¼šlexi
 
-Please input the score£º56
+Please input the scoreï¼š56
 
-Please input the students name£ºkliorange
+Please input the students nameï¼škliorange
 
-Please input the score£º-9
+Please input the scoreï¼š-9
 
 This exam have 3 students fail in total
 kaka
@@ -215,7 +214,7 @@ daniel
 tom
 lisa
 
-·Ö¶Î    ÈËÊı    Í¼ĞÎ
+åˆ†æ®µ    äººæ•°    å›¾å½¢
 0 -60    3      42.86%  ***
 60-69    0      0.00%
 70-79    0      0.00%
