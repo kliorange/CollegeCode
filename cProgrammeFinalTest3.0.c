@@ -1,7 +1,7 @@
 /*
 kliorange
 2015.11.28
-实践练习 4：
+cProgrammeFinalTest3.0：
 每位学生信息包括：学号、
 姓名、性别、学院、10 门
 成绩。共有不超过 100 位同学的信息存放在 ASCII 文件StudentInfo.txt 中；
@@ -22,6 +22,7 @@ CodeInfo.txt 中，性别代码
 //Need to change the information from figure to character
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 struct stuData
 {
