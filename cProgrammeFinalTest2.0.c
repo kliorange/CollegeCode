@@ -1,18 +1,19 @@
 /*
 kliorange
 2015.11.28
-ÊµÑéËÄ£º
-³É¼¨ÅÅÃû´Î£¨½á¹¹ÌåÊı×é£© Ä³°àÆÚÄ©¿¼ÊÔ¿ÆÄ¿Îª
-ÊıÑ§£¨MT£©¡¢Ó¢Óï£¨EN£© ºÍÎïÀí£¨PH£©£¬ÓĞ×î¶à ²»³¬¹ı 30 ÈË²Î¼Ó¿¼ ÊÔ£¬
-Ñ§ºÅ¿ÉÒÔÓÃÊäÈëµÄ ĞòºÅ´úÌæ¡£¿¼ÊÔºóÒª Çó£º
-£¨1£©¼ÆËãÃ¿¸öÑ§ÉúµÄ ×Ü·ÖºÍÆ½¾ù·Ö£»
-£¨2£©°´×Ü·Ö³É¼¨ÓÉ¸ß µ½µÍÅÅ³ö³É¼¨µÄÃû´Î£»
-£¨3£©´òÓ¡³öÃû´Î±í£¬ ±í¸ñÄÚ°üÀ¨Ñ§Éú±àºÅ¡¢ ¸÷¿Æ·ÖÊı¡¢×Ü·ÖºÍÆ½¾ù·Ö£»
-£¨4£©ÈÎÒâÊäÈëÒ»¸öÑ§ ºÅ£¬ÄÜ¹»²éÕÒ³ö¸ÃÑ§Éú ÔÚ°à¼¶ÖĞµÄÅÅÃû¼°Æä ¿¼ÊÔ·ÖÊı¡£
+å®éªŒå››ï¼š
+æˆç»©æ’åæ¬¡ï¼ˆç»“æ„ä½“æ•°ç»„ï¼‰ æŸç­æœŸæœ«è€ƒè¯•ç§‘ç›®ä¸º
+æ•°å­¦ï¼ˆMTï¼‰ã€è‹±è¯­ï¼ˆENï¼‰ å’Œç‰©ç†ï¼ˆPHï¼‰ï¼Œæœ‰æœ€å¤š ä¸è¶…è¿‡ 30 äººå‚åŠ è€ƒ è¯•ï¼Œ
+å­¦å·å¯ä»¥ç”¨è¾“å…¥çš„ åºå·ä»£æ›¿ã€‚è€ƒè¯•åè¦ æ±‚ï¼š
+ï¼ˆ1ï¼‰è®¡ç®—æ¯ä¸ªå­¦ç”Ÿçš„ æ€»åˆ†å’Œå¹³å‡åˆ†ï¼›
+ï¼ˆ2ï¼‰æŒ‰æ€»åˆ†æˆç»©ç”±é«˜ åˆ°ä½æ’å‡ºæˆç»©çš„åæ¬¡ï¼›
+ï¼ˆ3ï¼‰æ‰“å°å‡ºåæ¬¡è¡¨ï¼Œ è¡¨æ ¼å†…åŒ…æ‹¬å­¦ç”Ÿç¼–å·ã€ å„ç§‘åˆ†æ•°ã€æ€»åˆ†å’Œå¹³å‡åˆ†ï¼›
+ï¼ˆ4ï¼‰ä»»æ„è¾“å…¥ä¸€ä¸ªå­¦ å·ï¼Œèƒ½å¤ŸæŸ¥æ‰¾å‡ºè¯¥å­¦ç”Ÿ åœ¨ç­çº§ä¸­çš„æ’ååŠå…¶ è€ƒè¯•åˆ†æ•°ã€‚
 */
 
 #include<stdio.h>
 #include<string.h>
+//Struct data to store the students' information
 struct data
 {
     int id;
@@ -20,8 +21,8 @@ struct data
     double sum,ave;
 };
 
-//Rank the score from high to low or rank the score from low to high
-//a is the number of students. b is rank from high to low or from low to high
+//Rank the score from high to low or rank the score from low to high.
+//a is the number of students. b is rank from high to low or from low to high.
 void rank(struct data score[],int a,int b)
 {
     int i=0 , j=0;
@@ -48,29 +49,25 @@ void rank(struct data score[],int a,int b)
 }
 
 
-
-
 //Print the list
-//´òÓ¡³öÃû´Î±í£¬ ±í¸ñÄÚ°üÀ¨Ñ§Éú±àºÅ¡¢ ¸÷¿Æ·ÖÊı¡¢×Ü·ÖºÍÆ½¾ù·Ö
+//æ‰“å°å‡ºåæ¬¡è¡¨ï¼Œ è¡¨æ ¼å†…åŒ…æ‹¬å­¦ç”Ÿç¼–å·ã€ å„ç§‘åˆ†æ•°ã€æ€»åˆ†å’Œå¹³å‡åˆ†
 void printflist(struct data score[],int a)
-
 {
     int i=0;
-for( i=0 ; i<a ; i++ )
-
+    for( i=0 ; i<a ; i++ )
     {
         printf("Student ID : %d\n"
                "The MT EN PH score is : %-4.2lf %-4.2lf %-4.2lf\n"
                "And the sum is : %-4.2lf\n"
                "The average score is : %-4.2lf\n\n",
                score[i].id,score[i].MT,score[i].EN,
-score[i].PH,score[i].sum,score[i].ave);
+               score[i].PH,score[i].sum,score[i].ave);
     }
     return ;
 }
 
 //Search the students
-//ÈÎÒâÊäÈëÒ»¸öÑ§ºÅ£¬ÄÜ¹»²éÕÒ³ö¸ÃÑ§ÉúÔÚ°à¼¶ÖĞµÄÅÅÃû¼°Æä¿¼ÊÔ·ÖÊı¡£
+//ä»»æ„è¾“å…¥ä¸€ä¸ªå­¦å·ï¼Œèƒ½å¤ŸæŸ¥æ‰¾å‡ºè¯¥å­¦ç”Ÿåœ¨ç­çº§ä¸­çš„æ’ååŠå…¶è€ƒè¯•åˆ†æ•°ã€‚
 void searchid(struct data score[],int a)
 {
     int i = 0 ;
@@ -83,7 +80,7 @@ void searchid(struct data score[],int a)
                "And the sum is : %-4.2lf\n"
                "The average score is : %-4.2lf\n\n",
                score[i].id,score[i].MT,score[i].EN,score[i].PH,
-score[i].sum,score[i].ave);
+               score[i].sum,score[i].ave);
     return ;
 }
 
@@ -91,10 +88,10 @@ int main()
 {
     int a=0,b=0,i=0;
     /*
-    ¼ÆËãÃ¿¸öÑ§ÉúµÄ ×Ü·ÖºÍÆ½¾ù·Ö£»
-    °´×Ü·Ö³É¼¨ÓÉ¸ßµ½µÍÅÅ³ö³É¼¨µÄÃû´Î£»
-    ´òÓ¡³öÃû´Î±í£¬ ±í¸ñÄÚ°üÀ¨Ñ§Éú±àºÅ¡¢¸÷¿Æ·ÖÊı¡¢×Ü·ÖºÍÆ½¾ù·Ö£»
-    ÈÎÒâÊäÈëÒ»¸öÑ§ºÅ£¬ÄÜ¹»²éÕÒ³ö¸ÃÑ§ÉúÔÚ°à¼¶ÖĞµÄÅÅÃû¼°Æä¿¼ÊÔ·ÖÊı¡£
+    è®¡ç®—æ¯ä¸ªå­¦ç”Ÿçš„ æ€»åˆ†å’Œå¹³å‡åˆ†ï¼›
+    æŒ‰æ€»åˆ†æˆç»©ç”±é«˜åˆ°ä½æ’å‡ºæˆç»©çš„åæ¬¡ï¼›
+    æ‰“å°å‡ºåæ¬¡è¡¨ï¼Œ è¡¨æ ¼å†…åŒ…æ‹¬å­¦ç”Ÿç¼–å·ã€å„ç§‘åˆ†æ•°ã€æ€»åˆ†å’Œå¹³å‡åˆ†ï¼›
+    ä»»æ„è¾“å…¥ä¸€ä¸ªå­¦å·ï¼Œèƒ½å¤ŸæŸ¥æ‰¾å‡ºè¯¥å­¦ç”Ÿåœ¨ç­çº§ä¸­çš„æ’ååŠå…¶è€ƒè¯•åˆ†æ•°ã€‚
     */
     struct data score[31];
     printf("How many students you will input?");
@@ -105,8 +102,8 @@ int main()
         scanf("%d %lf %lf %lf",score[i].id,score[i].MT,score[i].EN,score[i].PH);
     }
 
-printf("\nWhich rank you want to see? "
-"From high to low '1' From low to high '0' ");
+    printf("\nWhich rank you want to see? "
+            "From high to low '1' From low to high '0' ");
     scanf("%d",&b);
 
     rank(score,a,b);
