@@ -39,7 +39,7 @@ void putStar(int a)
     printf("\n");
     return ;
 }
-//Judge the the number who in the a to b
+//Judge the the number which in the a to b
 int judgeNum(double score[],int a,int b)
 {
     int num=0,i=0;
